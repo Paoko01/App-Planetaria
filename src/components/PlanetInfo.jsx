@@ -24,7 +24,7 @@ const PlanetInfo = () => {
         const promises = planetNames.map(async (nombre) => {
           // Obtener el extracto del planeta
           const response = await axios.get(
-            `https://es.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&titles=${nombre}&exintro=1`
+            '/w/api.php?action=query&format=json&prop=extracts&titles=${nombre}&exintro=1'
           );
           const pageId = Object.keys(response.data.query.pages)[0];
           const extract = response.data.query.pages[pageId].extract;
