@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import viaLactea from '../../assets/images/vialactea.jpg';
+import viaLactea from '../../assets/vialactea.jpg';
 
 const About = () => {
   return (
