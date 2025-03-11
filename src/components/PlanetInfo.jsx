@@ -23,7 +23,7 @@ const PlanetInfo = () => {
       try {
         const promises = planetNames.map(async (nombre) => {
           const response = await axios.get(
-            `/w/api.php?action=query&format=json&prop=extracts&titles=${nombre}&exintro=1`
+            `/w/api.php?action=query&format=json&prop=extracts&titles=<span class="math-inline">\{nombre\}&exintro\=1&origin\=</span>{window.location.origin}`
           );
           const pageId = Object.keys(response.data.query.pages)[0];
           const extract = response.data.query.pages[pageId].extract;
